@@ -46,3 +46,14 @@ export const loginUser = async (loginInput) => {
     throw error;
   }
 };
+
+
+export const deleteTrip = async (tripId) => {
+  try {
+    const response = await axios.delete(`${API_URL}/trips/${tripId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+

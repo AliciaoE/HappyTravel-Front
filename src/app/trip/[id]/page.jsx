@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import { getTripsById } from "@/services/";
 import { useEffect, useState } from "react";
 import SkeletonDetails from "@/components/placeholder/SkeletonDetail";
+import ModalCancel from  "@/components/modal/ModalCancelTrip";
 export default function TripDetails() {
   const params = useParams();
   const [trip, setTrip] = useState([]);
