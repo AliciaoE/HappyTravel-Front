@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Btn from "@/components/Btn.jsx";
+
 export default function Card({ trip }) {
   return (
     <div className="bg-primary-yellow w-[70%] rounded-lg mb-[1rem] lg:basis-[18rem] min-[1600px]:basis-[21rem]">

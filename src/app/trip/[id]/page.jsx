@@ -28,7 +28,12 @@ export default function TripDetails() {
       ) : (
         <section className="absolute top-0 lg:static lg:max-w-[65%] lg:mx-auto lg:mt-[6rem]">
           <div className="lg:flex lg:gap-[2.5rem]">
-            <div className="relative w-full h-[50vh] bg-[url('/image/IslaEjemplo.jpg')] bg-no-repeat bg-center bg-[length:200%] rounded-b-3xl flex justify-center items-end lg:static lg:bg-cover lg:basis-[85%] lg:h-[28rem] lg:rounded-3xl">
+            <div
+              className="relative w-full h-[50vh] bg-no-repeat bg-center bg-[length:200%] rounded-b-3xl flex justify-center items-end lg:static lg:bg-cover lg:basis-[85%] lg:h-[28rem] lg:rounded-3xl"
+              style={{
+                backgroundImage: `url(http://localhost:8000/${trip.image_path})`,
+              }}
+            >
               <div className="lg:hidden absolute bg-tertiary-red  w-[70%]  rounded-2xl p-[1rem] text-center bottom-[-1rem]">
                 <h1 className="text-[1.3rem] text-primary-yellow font-bold">
                   {trip.title}
@@ -44,7 +49,7 @@ export default function TripDetails() {
                   <h1 className="text-[1.5rem] text-tertiary-red font-bold leading-6">
                     {trip.title}
                   </h1>
-                  <p className="text-[1.3 rem] text-tertiary-red">
+                  <p className="text-[1.3rem] text-tertiary-red">
                     {trip.location}
                   </p>
                 </div>

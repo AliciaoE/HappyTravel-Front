@@ -51,7 +51,7 @@ export const loginUser = async (loginInput) => {
 
 export const deleteTrip = async (tripId) => {
   try {
-    const response = await axios.delete(`${API_URL}/trips/${tripId}`);
+    const response = await axios.delete(`${API_URL}/trip/`,tripid);
     return response.data;
   } catch (error) {
     throw error;

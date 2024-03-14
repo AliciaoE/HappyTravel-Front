@@ -14,8 +14,9 @@ export default function NavBar() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setIsAuthenticated(false);
-    setModalMessage('Sesion cerrada correctamente')
+    setModalMessage("Sesion cerrada correctamente");
     setShowModal(true);
+    router.refresh();
   };
 
   const handleCloseModal = () => {
@@ -32,12 +33,7 @@ export default function NavBar() {
     <nav className="flex justify-between fixed bottom-[1rem] rounded-3xl w-[90%] mx-[1rem] py-[0.5rem] shadow-s-green bg-primary-yellow lg:static lg:basis-[10%] lg:bg-white-transparent lg:shadow-sh-transparent lg:py-0 z-[1] lg:justify-end lg:gap-[1rem]">
       {showModal && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          
-          <Modal
-            text={modalMessage}
-            onClick={handleCloseModal} 
-          />
-          
+          <Modal text={modalMessage} onClick={handleCloseModal} />
         </div>
       )}
       <Link href={"/"}>
