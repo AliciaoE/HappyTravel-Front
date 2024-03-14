@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
-  
+
   return (
     <header className="mt-[2rem] flex flex-col items-center lg:max-w-[78%] lg:flex-row lg:mx-auto lg:border-b-[0.1rem] lg:border-quaternary-blue">
       <div className="flex flex-col w-full items-center gap-[1.5rem] lg:flex-row lg:basis-[90%] lg:justify-between ">
@@ -21,7 +21,7 @@ export default function Header() {
         />
         {pathname === "/" && <Search />}
       </div>
-    
+
       <NavBar />
     </header>
   );

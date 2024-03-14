@@ -2,10 +2,10 @@ export default function SkeletonDetails() {
   return (
     <div
       role="status"
-      className="w-[100%] mx-auto animate-pulse absolute top-0 left-0 right-0 lg:static lg:max-w-[65%] lg:mt-[6rem] lg:w-full lg:gap-[2.5rem] lg:flex"
+      className="w-[100%] mx-auto  absolute top-0 left-0 right-0 lg:static lg:max-w-[65%] lg:mt-[6rem] lg:w-full lg:gap-[2.5rem] lg:flex"
     >
-      <div className="w-full h-[20rem] mb-[1rem] p-4  rounded-b-3xl  md:p-6 bg-[#b9b9b9] lg:w-[50%] lg:h-[28rem] lg:rounded-3xl lg:flex lg:justify-center lg:items-center">
-        <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+      <div className=" w-full h-[20rem] mb-[1rem] p-4  rounded-b-3xl  md:p-6 bg-[#b9b9b9] lg:w-[50%] lg:h-[28rem] lg:rounded-3xl lg:flex lg:justify-center lg:items-center">
+        <div className="animate-pulse flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
           <svg
             className="w-20 h-20 text-gray-200 dark:text-gray-400 lg:w-[10rem] lg:h-[10rem]"
             aria-hidden="true"
@@ -19,7 +19,7 @@ export default function SkeletonDetails() {
         </div>
         <div className="h-[6rem] w-[80%] bg-[#999999] rounded-2xl mx-auto mt-[2rem]  lg:hidden"></div>
       </div>
-      <div className="lg:w-[50%]">
+      <div className="lg:w-[50%] animate-pulse">
         <div className="h-2 w-[90%] bg-gray-200 rounded-full dark:bg-gray-700 bg-[#999999] mx-auto mt-[3rem] mb-3 lg:w-[60%] lg:h-[1rem] lg:mx-0"></div>
         <div className="h-2 bg-[#999999] rounded-full  w-[90%] mb-3 mx-auto lg:w-[40%] lg:h-3 lg:mb-[2rem] lg:mx-0"></div>
         <div className="h-2 w-[90%] bg-gray-200 rounded-full dark:bg-gray-700 bg-[#999999] mx-auto mb-3 lg:h-[0.6rem] lg:mx-0"></div>

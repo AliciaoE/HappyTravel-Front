@@ -4,6 +4,7 @@ import { getTripsById } from "@/services/";
 import { useEffect, useState } from "react";
 import SkeletonDetails from "@/components/placeholder/SkeletonDetail";
 import ModalCancel from  "@/components/modal/ModalCancelTrip";
+import Btn from "@/components/Btn";
 export default function TripDetails() {
   const params = useParams();
   const [trip, setTrip] = useState([]);
@@ -39,29 +40,49 @@ export default function TripDetails() {
             </div>
             <div className="w-[90%] mx-auto mt-[2.4rem] lg:mt-0">
               <div className="hidden h-[8rem] lg:flex lg:h-auto lg:mt-[2rem] lg:justify-between">
-                <div>
-                  <h1 className="text-[2rem] text-tertiary-red font-bold leading-6">
+                <div className="basis-[80%]">
+                  <h1 className="text-[1.5rem] text-tertiary-red font-bold leading-6">
                     {trip.title}
                   </h1>
-                  <p className="text-[1.45rem] text-tertiary-red">
+                  <p className="text-[1.3 rem] text-tertiary-red">
                     {trip.location}
                   </p>
                 </div>
-                <p>botones</p>
+                <div className="lg:basis-[20%] gap-[1rem] flex justify-endlg:items-center items-start">
+                  <Btn
+                    sourceIcon={"/image/Edit-icon.svg"}
+                    color={"bg-transparent"}
+                    classIcon="w-[2rem] lg:w-[1.8rem]"
+                    type="Link"
+                    href={"/"}
+                  />
+                  <Btn
+                    sourceIcon={"/image/Delete-icon.svg"}
+                    classIcon="w-[1.5rem] lg:w-[1.4rem]"
+                    color={"bg-transparent"}
+                    // onClick={}
+                  />
+                </div>
               </div>
-              {/* <p className=" text-[1rem] text-quaternary-blue lg:text-[1.1rem] lg:mt-[1rem]">
-        Aquí estará la explicación del porque quieres viajar allí y no debe
-        pasarse de más de 500 caracteres. Lorem ipsum dolor sit amet,
-        consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-        In enim justo, rhoncus ut, imperdiet a, venenatis viremtae.
-      </p> */}
               <p className="text-[1rem] text-quaternary-blue lg:text-[1.1rem] lg:mt-[1rem]">
                 {trip.description}
               </p>
+
+              <div className="flex gap-[0.5rem] items-start justify-end mt-[1rem] lg:hidden">
+                <Btn
+                  sourceIcon={"/image/Edit-icon.svg"}
+                  color={"bg-transparent"}
+                  classIcon="w-[2rem] lg:w-[1.8rem]"
+                  type="Link"
+                  href={"/"}
+                />
+                <Btn
+                  sourceIcon={"/image/Delete-icon.svg"}
+                  classIcon="w-[1.5rem] lg:w-[1.4rem]"
+                  color={"bg-transparent"}
+                  // onClick={}
+                />
+              </div>
             </div>
           </div>
         </section>

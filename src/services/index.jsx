@@ -36,6 +36,7 @@ export const getTripsById = async (id) => {
   });
   return response.data;
 };
+
 export const loginUser = async (loginInput) => {
   try {
     const response = await axios.post(`${API_URL}/login/`, loginInput);
