@@ -46,6 +46,27 @@ export const loginUser = async (loginInput) => {
     console.error("Error al iniciar sesión:", error);
     throw error;
   }
+
+};
+
+export const addTrip = async (formTrip) => {
+  try {
+    const token = localStorage.getItem("token"); 
+    const response = await axios.post(
+      `${API_URL}/store`,
+      formTrip,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`, 
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    return response.data; 
+  } catch (error) {
+    console.log("Error al agregar viaje: ", error);
+    throw error;
+  }
 };
 
 

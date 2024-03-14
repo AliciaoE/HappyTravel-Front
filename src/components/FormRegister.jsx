@@ -117,8 +117,8 @@ export default function FormRegister() {
         {errors.password && (
           <p className="text-tertiary-red font-semibold">{errors.password}</p>
         )}
-        <div className="flex gap-4 justify-center pt-8"></div>
-        <div className="flex gap-4 my-3">
+        
+        <div className="flex justify-center gap-4 my-3">
           <Btn
             text="Aceptar"
             color="bg-secondary-green"
